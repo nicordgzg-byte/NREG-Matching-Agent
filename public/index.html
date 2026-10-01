@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>NREG Matching</title>
+    <style>
+      :root { color-scheme: light; font-family: Inter, ui-sans-serif, system-ui, -apple-system, sans-serif; background: #f6f7f9; color: #17202a; }
+      body { margin: 0; } header { background: #102a43; color: white; padding: 24px 32px; } main { max-width: 1180px; margin: 0 auto; padding: 24px; }
+      h1 { margin: 0 0 4px; font-size: 24px; } h2 { font-size: 18px; margin: 0; } .muted { color: #627d98; font-size: 13px; }
+      .grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 20px; } .card, .record { background: white; border: 1px solid #d9e2ec; border-radius: 12px; padding: 16px; box-shadow: 0 1px 2px #102a4314; }
+      .metric { font-size: 28px; font-weight: 700; margin-top: 8px; } .section { margin-top: 20px; } .toolbar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; gap: 12px; }
+      .list { display: grid; gap: 10px; } .record { display: flex; justify-content: space-between; gap: 16px; } .record h3 { margin: 0 0 8px; font-size: 15px; } .record p { margin: 4px 0; white-space: pre-wrap; }
+      button { border: 0; border-radius: 8px; padding: 9px 12px; cursor: pointer; background: #177ddc; color: white; font-weight: 600; } button.secondary { background: #e6eef7; color: #243b53; } button.danger { background: #d64545; }
+      .tabs { display: flex; gap: 8px; margin-bottom: 16px; } .empty { padding: 28px; text-align: center; color: #627d98; background: white; border: 1px dashed #bcccdc; border-radius: 12px; }
+      @media (max-width: 800px) { .grid { grid-template-columns: repeat(2, 1fr); } .record { display: block; } }
+    </style>
+  </head>
+  <body>
+    <header><h1>NREG Matching</h1><div class="muted" style="color:#d9e2ec">Ofertas y demandas recibidas por WhatsApp</div></header>
+    <main>
+      <div class="grid" id="metrics"></div>
+      <div class="tabs">
+        <button data-tab="active">Activos</button><button class="secondary" data-tab="matches">Matches</button><button class="secondary" data-tab="closed">Cerrados / vencidos</button>
+      </div>
+      <section id="content"></section>
+    </main>
+    <script src="/app.js"></script>
+  </body>
+</html>
